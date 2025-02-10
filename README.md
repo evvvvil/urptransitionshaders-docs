@@ -34,9 +34,9 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.png?raw=true)
 
-2. Create a new material in Unity or select an existing material which is using `Lit`.
+2. Create a new material in Unity or select an existing material which is using `Lit` / `Unlit`. (For this step by step guide we will assume we are using `Lit` not `Unlit`, as `Lit` has more options)
 
-3. Switch the material's shader from `Lit` to `Lit-transition`: click shader dropdown on the top of material and in `Universal Render Pipeline` category select `Lit-transition`.
+3. Switch the material's shader from `Lit` to `Lit-Transition`: click shader dropdown on the top of material and in `Universal Render Pipeline` category select `Lit-Transition`.
 
 4. If you are editing an existing `Lit` material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out `Transition Options` in your material inspector panel.
 
