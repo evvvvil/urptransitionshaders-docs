@@ -171,3 +171,11 @@ Use this slider to visually debug the transition animation.
 
 **Update material list**<br>
 If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials.<br>NOTE: You only need to worry about updating list of materials when in editor mode. When the game starts the list of material will be automatically updated.
+
+## URPTransitionGroup Public Methods:
+
+**FadeIn(float duration)**
+Start the transtion fade from 0 to 1 by calling `URPTranstionGroup.FadeIn(someDurationInSeconds)`. Yes the duration is in seconds.
+
+**FadeOut(float duration)**
+Start the transtion fade from 1 to 0 by calling `URPTranstionGroup.FadeOut(someDurationInSeconds)`. Yes the duration is in seconds.
