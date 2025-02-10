@@ -15,7 +15,7 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 - Opaque transition with 'inside' colouring
 - Seamless shader switch: material maps and values carry over, so you dont have to redesign your materials
 - Transition along local or world axis
-- Transitions shadow and depth as well
+- Transitions shadows and depth as well
 - Mirrored, slanted and other transition effects
 - Use the provided URPTransitionGroup script to build your own logic
 - Or create sequences to fade on start without writing any code
