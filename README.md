@@ -31,81 +31,81 @@ Transition Options:
 
 Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the 'Scale' and 'Position Offset' to achieve this, based on your 'Axis', 'Direction', etc.
 
-Mode
+**Mode**
 
 Transition uses local or world axis. Use world axis to transition multiple meshes along in a sequence after each other.
 
-Axis
+**Axis**
 
 Select which axis to do the transition along.
 
-Direction
+**Direction**
 
 Select which direction the transition will progress along the axis.
 
-Scale
+**Scale**
 
 Scale transition coverage to adjust amount of object revealed at the end of transition.
 
-Gradient Length
+**Gradient Length**
 
 This option is only available when surface  type is set to 'Transparent'. 
 Length of transition gradient. Lower number will make the transition gradient shorter.
 
-Position Offset
+**Position Offset**
 
 Offset start position of transition. Example: if object is centrally aligned (axis / center point at center) but you want to transition from the bottom then change this value down to shift transition start to bottom.
 
-Write Depth
+**Write Depth**
 
 Forces depth write on this material. Tick this to resolve depth issues with transparent meshes, such as when multiple overlapping meshes share the same transition material.
 
-Shadow Scale
+**Shadow Scale**
 
 Same as 'Scale' but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to 'Scale' above + 'Shadow Alpha Clipping' value.
 
-Shadow Offset
+**Shadow Offset**
 
 Same as 'Position Offset' but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to 'Position Offset'.
 
-Shadow Alpha Clipping
+**Shadow Alpha Clipping**
 
 Use shadow alpha clipping to fine tune the shadow's coverage. Same concept as 'Alpha Clipping' in 'Surface Options', however this only affect the shadow and doesn't require 'Alpha Clipping' to be on. Try a value of 0.5 to start off and tweak to get a thinner or wider shadow.
 
-Shadow Render face
+**Shadow Render face**
 
 This option is only available when surface render face is set to 'Front' or 'Back'. 
 Only available when 'Render Face' in 'Surface Options' is not set to 'Both'. When rendering just the front or back face, shadows can appear cut off during transitions. Use this to override the render face setting for shadows to improve coverage. Flip the shadow render face or select both to ensure the shadow aligns with the mesh transition.
 
-Mirror Transition
+**Mirror Transition**
 
 Mirror transition will fade both axis directions. For example to reveal an object from its center outwards vertically and in both up and down direction.
 
-Mirror Offset
+**Mirror Offset**
 
 This option is only available when mirror transition is ON. 
 Offset start of mirror effect. Useful when 'Direction' is 'Negative' - should be close to 0 when 'Positive'. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
 
-Slant Transition
+**Slant Transition**
 
 Slant / angle transition with a diagonal cut along another axis.");
 
-Slant Axis
+**Slant Axis**
 
 This option is only available when slant transition is ON. 
 Which axis to do the slant along.
 
-Slant Amount
+**Slant Amount**
 
-This option is only available when slant transition is ON. 
+_This option is only available when slant transition is ON._ 
 Slant amount, and also direction. The slant angle direction will depend on this value being positive or negative.
 
-Backface colour
+**Backface colour**
 
 This option is only available when surface render face is set to 'Both'. 
 You can colour the back face of your double sided object during the transition to give it a more tidy / stencil look.
 
-Backface colouring
+**Backface colouring**
 This option is only available when surface render face is set to 'Both'. 
 How much to colour the back face with the 'Backface Colour' defined above.
 
