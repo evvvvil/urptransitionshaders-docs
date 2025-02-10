@@ -21,6 +21,8 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 - Reveal huge part of a level in a sequence or just individual objects 
 - "Silhouette" shader option to flash object to unlit plain colour
 
+![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-03.jpg?raw=true)
+
 ## How to use:
 
 1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's "Shader" dropdown. In "Universal Render Pipeline" menu you now have new transition shaders such as "Lit-Transition" and "Unlit-Transition". :star_struck:
