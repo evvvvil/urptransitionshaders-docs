@@ -60,7 +60,7 @@ You can set which type of animation easing for your material transition in the `
 
 ## Final Notes:
 
-To achieve smooth transparency without a hard edge use Surface type `Transparent` with `Alpha` blend mode and UNTICK `Preserve specular lighting`.
+To achieve smooth transparency without a hard edge use surface type `Transparent` with `Alpha` blend mode and UNTICK `Preserve specular lighting`.
 
 In UNLIT and deferred, if you see black areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold.
 
