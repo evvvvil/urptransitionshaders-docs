@@ -64,6 +64,8 @@ To achieve smooth transparency without a hard edge use surface type `Transparent
 
 In UNLIT and deferred, if you see black areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold.
 
+Do read the `Shadow render face` paragraph in the "Transition Options" below. You might have to flip shadow render face or render both to match yer shadow and mesh transitions.
+
 ## Transition Options:
 
 ![Transition options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03w.png?raw=true)
@@ -93,6 +95,13 @@ Offset start position of transition. Example: if object is centrally aligned (ax
 **Write Depth**<br>
 Forces depth write on this material. Tick this to resolve depth issues with transparent meshes, such as when multiple overlapping meshes share the same transition material.
 
+**Mirror Transition**<br>
+Mirror transition will fade both axis directions. For example to reveal an object from its center outwards vertically and in both up and down direction.
+
+**Mirror Offset**<br>
+_This option is only available when `Mirror Transition` is ON._<br> 
+Offset start of mirror effect. Useful when `Direction` is `Negative` - should be close to 0 when `Positive`. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
+
 **Shadow Scale**<br>
 Same as `Scale` but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Scale` above however it depends on your `Shadow Alpha Clipping` value.
 
@@ -106,13 +115,6 @@ Use shadow alpha clipping to fine tune the shadow's coverage. Same concept as `A
 **Shadow Render face**<br>
 _This option is only available when surface render face is set to `Front` or `Back`._<br> 
 When rendering just the front or back face, shadows can appear cut off during transitions. Use this to override the render face setting for shadows to improve coverage. Flip the shadow render face or select both to ensure the shadow aligns with the mesh transition.
-
-**Mirror Transition**<br>
-Mirror transition will fade both axis directions. For example to reveal an object from its center outwards vertically and in both up and down direction.
-
-**Mirror Offset**<br>
-_This option is only available when `Mirror Transition` is ON._<br> 
-Offset start of mirror effect. Useful when `Direction` is `Negative` - should be close to 0 when `Positive`. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
 
 **Slant Transition**<br>
 Slant / angle transition with a diagonal cut along another axis.
