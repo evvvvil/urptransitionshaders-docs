@@ -150,9 +150,9 @@ How much to tint the final colour with the `Silhouette Colour` defined above.
 
 **Action on start**<br>
 What happens when the game starts:
--`Nothing` does nothing. 
--`Hide on start` hides all transition materials on start.
--`Transition on start` fades in all transition materials on start. Transition animation will have a duration of `Transition on start duration` and be delayed by `Transition on start delay`.
+- `Nothing` does nothing. 
+- `Hide on start` hides all transition materials on start.
+- `Transition on start` fades in all transition materials on start. Transition animation will have a duration of `Transition on start duration` and be delayed by `Transition on start delay`.
 
 **Transition on start duration**<br>
 Duration of the start transition (in seconds).
