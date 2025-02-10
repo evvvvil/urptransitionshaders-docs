@@ -136,8 +136,23 @@ How much to tint the final colour with the 'Silhouette Colour' defined above.
 
 ![URPTransitionGroup options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
-**Fader**<br>
-Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the 'Scale' and 'Position Offset' to achieve this, based on your 'Axis', 'Direction', etc.
+**Action on start**<br>
+What happens when the game starts.\n'Nothing' does nothing.\n'Hide on start' hides all transitionable materials on start.\n'Transition on start' fades in all transitionable materials on start. Set transition duration and delay transition start as an option.
 
-**Mode**<br>
-Transition uses local or world axis. Use world axis to transition multiple meshes along in a sequence after each other.
+**Transition on start duration**<br>
+Duration of the start transition (in seconds).
+
+**Transition on start delay**<br>
+Delay the start transition by some time before it starts (in seconds).
+
+**Transition ease**<br>
+Choose a type of easing for the transition animation.
+
+**Transition children**<br>
+Tick to also transition all children which have a transition material.
+
+**DEBUG IN EDITOR - Transition fader**<br>
+Use this slider to visually debug the transition animation.
+
+**Update material list**<br>
+If you change the object hierachy then please click the 'Update material list' button to refresh the list of transitionable materials.
