@@ -13,9 +13,10 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 # Features:
 - Transparent smooth alpha transition fade
 - Opaque transition with 'inside' colouring
-- Seamles shader switch: material maps and values carry over, so you dont have to redesign your materials.
+- Seamles shader switch: material maps and values carry over, so you dont have to redesign your materials
 - Transition along local or world axis
-- Mirrored, slanted and more transition effects
+- Transitions shadow and depth as well as mesh
+- Mirrored, slanted and other transition effects
 - Use the provided URPTransitionGroup script to build your own logic
 - Or create sequences to fade on start without writing any code
 - Reveal huge part of a level in a sequence or just individual objects 
