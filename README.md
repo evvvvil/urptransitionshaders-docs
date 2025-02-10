@@ -46,83 +46,67 @@ Transition uses local or world axis. Use world axis to transition multiple meshe
 
 Select which axis to do the transition along.
 
-**Direction**
-
+**Direction**<br>
 Select which direction the transition will progress along the axis.
 
-**Scale**
-
+**Scale**<br>
 Scale transition coverage to adjust amount of object revealed at the end of transition.
 
-**Gradient Length**
-
+**Gradient Length**<br>
 This option is only available when surface  type is set to 'Transparent'. 
 Length of transition gradient. Lower number will make the transition gradient shorter.
 
-**Position Offset**
-
+**Position Offset**<br>
 Offset start position of transition. Example: if object is centrally aligned (axis / center point at center) but you want to transition from the bottom then change this value down to shift transition start to bottom.
 
-**Write Depth**
-
+**Write Depth**<br>
 Forces depth write on this material. Tick this to resolve depth issues with transparent meshes, such as when multiple overlapping meshes share the same transition material.
 
-**Shadow Scale**
-
+**Shadow Scale**<br>
 Same as 'Scale' but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to 'Scale' above + 'Shadow Alpha Clipping' value.
 
-**Shadow Offset**
-
+**Shadow Offset**<br>
 Same as 'Position Offset' but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to 'Position Offset'.
 
-**Shadow Alpha Clipping**
+**Shadow Alpha Clipping**<br>
 _This option is only available when surface render face is set to 'Front' or 'Back'._<br> 
 Use shadow alpha clipping to fine tune the shadow's coverage. Same concept as 'Alpha Clipping' in 'Surface Options', however this only affect the shadow and doesn't require 'Alpha Clipping' to be on. Try a value of 0.5 to start off and tweak to get a thinner or wider shadow.
 
-**Shadow Render face**
-
+**Shadow Render face**<br>
 _This option is only available when surface render face is set to 'Front' or 'Back'._<br> 
 Only available when 'Render Face' in 'Surface Options' is not set to 'Both'. When rendering just the front or back face, shadows can appear cut off during transitions. Use this to override the render face setting for shadows to improve coverage. Flip the shadow render face or select both to ensure the shadow aligns with the mesh transition.
 
-**Mirror Transition**
-
+**Mirror Transition**<br>
 Mirror transition will fade both axis directions. For example to reveal an object from its center outwards vertically and in both up and down direction.
 
-**Mirror Offset**
-
+**Mirror Offset**<br>
 _This option is only available when mirror transition is ON._<br> 
 Offset start of mirror effect. Useful when 'Direction' is 'Negative' - should be close to 0 when 'Positive'. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
 
-**Slant Transition**
-
+**Slant Transition**<br>
 Slant / angle transition with a diagonal cut along another axis.
 
-**Slant Axis**
-
+**Slant Axis**<br>
 _This option is only available when slant transition is ON._<br> 
 Which axis to do the slant along.
 
-**Slant Amount**
-
+**Slant Amount**<br>
 _This option is only available when slant transition is ON._<br> 
 Slant amount, and also direction. The slant angle direction will depend on this value being positive or negative.
 
-**Backface colour**
+**Backface colour**<br>
 _This option is only available when surface render face is set to 'Both'._<br> 
 You can colour the back face of your double sided object during the transition to give it a more tidy / stencil look.
 
-**Backface colouring**
+**Backface colouring**<br>
 _This option is only available when surface render face is set to 'Both'._<br>
 How much to colour the back face with the 'Backface Colour' defined above.
 
-**Silhouette Tint**
-
+**Silhouette Tint**<br>
 Tint final colour with a flat silhouette colour to create an unlit silhouette look.
 
-**Silhouette Colour**
-
+**Silhouette Colour**<br>
 Which colour to use as the silhouette tint colour.
 
-**Silhouette Amount**
-
+**Silhouette Amount**<br>
 How much to tint the final colour with the 'Silhouette Colour' defined above.
