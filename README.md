@@ -34,16 +34,13 @@ Import the URP-Transition-Shaders package. You should now have new shader option
 
 ## Transition Options:
 
-**Fader** 
-
+**Fader**<br>
 Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the 'Scale' and 'Position Offset' to achieve this, based on your 'Axis', 'Direction', etc.
 
-**Mode**
-
+**Mode**<br>
 Transition uses local or world axis. Use world axis to transition multiple meshes along in a sequence after each other.
 
-**Axis**
-
+**Axis**<br>
 Select which axis to do the transition along.
 
 **Direction**<br>
