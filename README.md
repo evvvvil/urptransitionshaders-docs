@@ -6,15 +6,15 @@ Extends URP shaders to add a transiton feature to reveal / fade any object or gr
 Retains all URP material features intact such as: lighting, surface options, surface inputs.
 Surgically adds transition feature into URP shaders without disturbing "that tasty URP sauce".
 
-Features:
--Transparent smooth alpha transition fade
--Opaque transition with 'inside' colouring
--Seamles shader switch: material maps and values carry over, so you dont have to redesign your materials.
--Transition along local or world axis
--Mirrored, slanted and more transition effects
--Build your own logic to transtion objects using the transition script provided
--Or build sequences to fade on start without writing any code
--Reveal huge part of level in a sequence or individual objects 
+# Features:
+- Transparent smooth alpha transition fade
+- Opaque transition with 'inside' colouring
+- Seamles shader switch: material maps and values carry over, so you dont have to redesign your materials.
+- Transition along local or world axis
+- Mirrored, slanted and more transition effects
+- Build your own logic to transtion objects using the transition script provided
+- Or build sequences to fade on start without writing any code
+- Reveal huge part of level in a sequence or individual objects 
 
 
 ## How to use:
