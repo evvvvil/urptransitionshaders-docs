@@ -1,4 +1,4 @@
-# **URP Transition shaders documentation**
+# **URP Transition Shaders Documentation**
  
 ## What does it do?
 
