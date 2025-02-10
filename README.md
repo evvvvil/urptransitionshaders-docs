@@ -1,8 +1,8 @@
 # **URP Transition Shaders Documentation**
- 
-## What does it do?
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-02.jpg?raw=true)
+ 
+## What does it do?
 
 Extends URP shaders to add a transiton feature to reveal / fade any object or group of objects.
 Retains all URP material features intact such as: lighting, surface options, surface inputs.
@@ -51,6 +51,15 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
     - Use URPTransitonGroup inspector UI options to create transition from start without having to write any code.
 
 8. See the `ExampleTransition` scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
+
+## Transition Easing:
+
+You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down setting which easing will be used with "Transition on start" as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`.
+
+## Final Notes:
+
+To achieve smooth transparency without hard edge use Surface type `Transparent` with `Alpha` blend mode and UNTICK `Preserve specular lighting` to achieve smooth alpha transitions.
+In UNLIT and deferred, if you see black areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold.
 
 ## Transition Options:
 
