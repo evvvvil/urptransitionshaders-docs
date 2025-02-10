@@ -13,9 +13,9 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 # Features:
 - Transparent smooth alpha transition fade
 - Opaque transition with 'inside' colouring
-- Seamles shader switch: material maps and values carry over, so you dont have to redesign your materials
+- Seamless shader switch: material maps and values carry over, so you dont have to redesign your materials
 - Transition along local or world axis
-- Transitions shadow and depth as well as mesh
+- Transitions shadow and depth as well
 - Mirrored, slanted and other transition effects
 - Use the provided URPTransitionGroup script to build your own logic
 - Or create sequences to fade on start without writing any code
@@ -131,3 +131,13 @@ Which colour to use as the silhouette tint colour.
 **Silhouette Amount**<br>
 _This option is only available when silhouette tint is ON._<br> 
 How much to tint the final colour with the 'Silhouette Colour' defined above.
+
+## URPTransitionGroup Options:
+
+![URPTransitionGroup options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
+
+**Fader**<br>
+Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the 'Scale' and 'Position Offset' to achieve this, based on your 'Axis', 'Direction', etc.
+
+**Mode**<br>
+Transition uses local or world axis. Use world axis to transition multiple meshes along in a sequence after each other.
