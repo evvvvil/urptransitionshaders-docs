@@ -2,10 +2,20 @@
  
 ## What does it do?
 
-Extends URP shaders to allow users to transition / reveal / fade any object.
+Extends URP shaders to add a transiton feature to reveal / fade any object or group of objects.
+Retains all URP material features intact such as: lighting, surface options, surface inputs.
+Surgically adds transition feature into URP shaders without disturbing "that tasty URP sauce".
 
-Retain all URP material features such a lighting, surface options, surface inputs, etc...
-The idea isn't to rewrite URP shaders such as lit and unlit but to surgically add the transition feature while retaining all the URP features intact.
+Features:
+-Transparent smooth alpha transition fade
+-Opaque transition with 'inside' colouring
+-Seamles shader switch: material maps and values carry over, so you dont have to redesign your materials.
+-Transition along local or world axis
+-Mirrored, slanted and more transition effects
+-Build your own logic to transtion objects using the transition script provided
+-Or build sequences to fade on start without writing any code
+-Reveal huge part of level in a sequence or individual objects 
+
 
 ## How to use:
 
@@ -25,7 +35,7 @@ The idea isn't to rewrite URP shaders such as lit and unlit but to surgically ad
 
 5. If you are casting shadows then you should also change "Shadow scale" and "Shadow offset" separately from "Scale" and "Offset" above. That's because the shadow values will most likely have to be a bit different depending on your "Shadow cut off", whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
 
-6. Add the provided script "URPTransitionGroup" as a component to the mesh that has your new transition material. You can also add the script to a parent of multiple meshes which have transition materials. This will create a URPTransitionGRoup, ready to be faded in / out.
+6. Add the provided script "URPTransitionGroup" as a component to the mesh that has your new transition material. You can also add the script to a parent of multiple meshes which have transition materials. This will create a URPTransitionGroup, ready to be faded in / out.
 
 7. Once you have created a URPTransitonGroup, write your own logic to transition/fade in or out your meshes by calling URPTransitonGroup's transition functions "FadeIn(float duration)" or "FadeOut(float duration)". 
 
