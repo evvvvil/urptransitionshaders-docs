@@ -4,8 +4,8 @@
  
 ## What does it do?
 
-Extends URP shaders to add a transiton feature to reveal / fade any object or group of objects.
-Retains all URP material features intact such as: lighting, surface options, surface inputs.
+Extends URP shaders to add a transiton feature to reveal / fade any object or group of objects.<br>
+Retains all URP material features intact such as: lighting, surface options, surface inputs.<br>
 Surgically adds transition feature into URP shaders without disturbing "that tasty URP sauce".
 
 Please see the [demo video on youtube](https://www.youtube.com/watch?v=O7nvYtbpcAo)
