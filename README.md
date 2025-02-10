@@ -56,7 +56,7 @@ Please see the [demo video on youtube](https://www.youtube.com/watch?v=O7nvYtbpc
 
 ## Transition Easing:
 
-You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down that sets which easing will be used with `Transition on start` as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`. Know yer easing: https://easings.net/
+You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down that sets which easing will be used with `Transition on start` as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`. [Know yer easing](https://easings.net/), yeah? 
 
 ## Final Notes:
 
