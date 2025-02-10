@@ -21,9 +21,9 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 
 1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's "Shader" dropdown. In "Universal Render Pipeline" menu you now have new transition shaders such as "Lit-Transition" and "Unlit-Transition". :star_struck:
 
-![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img01.png?raw=true)
+![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img01.png?raw=true)
 
-![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.png?raw=true)
+![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.png?raw=true)
 
 2. Create a new material in Unity or select an existing material which is using "Lit".
 
@@ -37,7 +37,7 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 
 6. Add the provided script "URPTransitionGroup" as a component to the mesh that has your new transition material. Alternatively you can also add the script to a parent of multiple meshes which have transition materials. This will create a URPTransitionGroup, ready to be faded in / out. NOTE: You can visually check / debug multiple material transitions by adding "URPTransitionGroup" to a parent of meshes and using the script "Transition Fader" under "DEBUG IN EDITOR". This is handy to visualise all your children material transition in one push of a fader.
 
-![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
+![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
 7. Once you have created a URPTransitonGroup you can either:
     - write your own logic to transition/fade in or out your meshes by calling URPTransitonGroup's transition functions "FadeIn(float duration)" or "FadeOut(float duration)"
@@ -47,7 +47,7 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 
 ## Transition Options:
 
-![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03.png?raw=true)
+![Transition options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03.png?raw=true)
 
 **Fader**<br>
 Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the 'Scale' and 'Position Offset' to achieve this, based on your 'Axis', 'Direction', etc.
