@@ -8,6 +8,8 @@ Extends URP shaders to add a transiton feature to reveal / fade any object or gr
 Retains all URP material features intact such as: lighting, surface options, surface inputs.
 Surgically adds transition feature into URP shaders without disturbing "that tasty URP sauce".
 
+Please see the (https://www.youtube.com/watch?v=O7nvYtbpcAo)demo video on youtube
+
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-01.jpg?raw=true)
 
 # Features:
