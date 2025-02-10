@@ -97,7 +97,7 @@ Which axis to do the slant along.
 
 **Slant Amount**
 
-_This option is only available when slant transition is ON._ 
+_This option is only available when slant transition is ON._<br> 
 Slant amount, and also direction. The slant angle direction will depend on this value being positive or negative.
 
 **Backface colour**
