@@ -66,7 +66,7 @@ In UNLIT and deferred, if you see black areas which should be transparent: turn 
 
 ## Transition Options:
 
-![Transition options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03.png?raw=true)
+![Transition options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03q.png?raw=true)
 
 **Fader**<br>
 Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the `Scale` and `Position Offset` to achieve this, based on your `Axis`, `Direction`, etc.
