@@ -13,6 +13,9 @@ Import the URP-Transition-Shaders package. You should now have new shader option
 
 ![alt text](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Screenshot01.png?raw=true)
 
+![alt text](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Screenshot02.png?raw=true)
+
+
 1. Create a new material in Unity or select an existing material which is using "Lit".
 
 2. Switch the material's shader from "Lit" to "Lit-transition": click shader dropdown on the top of material and in  "Universal Render Pipeline" menu select "Lit-transition".
@@ -69,12 +72,12 @@ Same as 'Scale' but for shadows. It lets you adjust the shadow transition scale 
 Same as 'Position Offset' but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to 'Position Offset'.
 
 **Shadow Alpha Clipping**
-
+_This option is only available when surface render face is set to 'Front' or 'Back'._<br> 
 Use shadow alpha clipping to fine tune the shadow's coverage. Same concept as 'Alpha Clipping' in 'Surface Options', however this only affect the shadow and doesn't require 'Alpha Clipping' to be on. Try a value of 0.5 to start off and tweak to get a thinner or wider shadow.
 
 **Shadow Render face**
 
-This option is only available when surface render face is set to 'Front' or 'Back'. 
+_This option is only available when surface render face is set to 'Front' or 'Back'._<br> 
 Only available when 'Render Face' in 'Surface Options' is not set to 'Both'. When rendering just the front or back face, shadows can appear cut off during transitions. Use this to override the render face setting for shadows to improve coverage. Flip the shadow render face or select both to ensure the shadow aligns with the mesh transition.
 
 **Mirror Transition**
@@ -83,16 +86,16 @@ Mirror transition will fade both axis directions. For example to reveal an objec
 
 **Mirror Offset**
 
-This option is only available when mirror transition is ON. 
+_This option is only available when mirror transition is ON._<br> 
 Offset start of mirror effect. Useful when 'Direction' is 'Negative' - should be close to 0 when 'Positive'. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
 
 **Slant Transition**
 
-Slant / angle transition with a diagonal cut along another axis.");
+Slant / angle transition with a diagonal cut along another axis.
 
 **Slant Axis**
 
-This option is only available when slant transition is ON. 
+_This option is only available when slant transition is ON._<br> 
 Which axis to do the slant along.
 
 **Slant Amount**
@@ -102,21 +105,21 @@ Slant amount, and also direction. The slant angle direction will depend on this 
 
 **Backface colour**
 
-This option is only available when surface render face is set to 'Both'. 
+_This option is only available when surface render face is set to 'Both'._<br> 
 You can colour the back face of your double sided object during the transition to give it a more tidy / stencil look.
 
 **Backface colouring**
-This option is only available when surface render face is set to 'Both'. 
+_This option is only available when surface render face is set to 'Both'._<br>
 How much to colour the back face with the 'Backface Colour' defined above.
 
-Silhouette Tint
+**Silhouette Tint**
 
 Tint final colour with a flat silhouette colour to create an unlit silhouette look.
 
-Silhouette Colour
+**Silhouette Colour**
 
-Which colour to use as the silhouette tint colour.");
+Which colour to use as the silhouette tint colour.
 
-Silhouette Amount
+**Silhouette Amount**
 
 How much to tint the final colour with the 'Silhouette Colour' defined above.
