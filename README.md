@@ -20,7 +20,7 @@ Import the URP-Transition-Shaders package. You should now have new shader option
 
 2. Switch the material's shader from "Lit" to "Lit-transition": click shader dropdown on the top of material and in  "Universal Render Pipeline" menu select "Lit-transition".
 
-3. If you are editing an existing "Lit" material then all the maps and values should stay the same. Your material's look will stay intact. You should now see a new fold out "Transition Options" in your material inspector panel,
+3. If you are editing an existing "Lit" material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out "Transition Options" in your material inspector panel.
 
 4. Move the "Fader" slider to see the transition in effect. Change the "Scale" and "Position Offset" transition options to make sure your object fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the "Gradient Length" at yer leisure.
 
