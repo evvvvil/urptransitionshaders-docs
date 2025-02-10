@@ -47,17 +47,17 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
 7. Once you have created a URPTransitonGroup you can either:
-    - write your own logic to transition/fade in or out your meshes by calling URPTransitonGroup's transition functions "FadeIn(float duration)" or "FadeOut(float duration)"
+    - write your own logic to transition/fade in or out your meshes by calling URPTransitonGroup's transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
     - Use URPTransitonGroup inspector UI options to create transition from start without having to write any code.
 
-8. See the "ExampleTransition" scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
+8. See the `ExampleTransition` scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
 
 ## Transition Options:
 
 ![Transition options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03.png?raw=true)
 
 **Fader**<br>
-Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the 'Scale' and 'Position Offset' to achieve this, based on your 'Axis', 'Direction', etc.
+Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the `Scale` and `Position Offset` to achieve this, based on your `Axis`, `Direction`, etc.
 
 **Mode**<br>
 Transition uses local or world axis. Use world axis to transition multiple meshes along in a sequence after each other.
@@ -82,10 +82,10 @@ Offset start position of transition. Example: if object is centrally aligned (ax
 Forces depth write on this material. Tick this to resolve depth issues with transparent meshes, such as when multiple overlapping meshes share the same transition material.
 
 **Shadow Scale**<br>
-Same as `Scale` but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Scale` above + `Shadow Alpha Clipping` value.
+Same as `Scale` but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Scale` above however it depends on your `Shadow Alpha Clipping` value.
 
 **Shadow Offset**<br>
-Same as `Position Offset` but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to 'Position Offset'.
+Same as `Position Offset` but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Position Offset`.
 
 **Shadow Alpha Clipping**<br>
 _This option is only available when surface render face is set to `Front` or `Back`._<br> 
@@ -100,7 +100,7 @@ Mirror transition will fade both axis directions. For example to reveal an objec
 
 **Mirror Offset**<br>
 _This option is only available when `Mirror Transition` is ON._<br> 
-Offset start of mirror effect. Useful when 'Direction' is 'Negative' - should be close to 0 when 'Positive'. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
+Offset start of mirror effect. Useful when `Direction` is `Negative` - should be close to 0 when `Positive`. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
 
 **Slant Transition**<br>
 Slant / angle transition with a diagonal cut along another axis.
@@ -155,4 +155,4 @@ Tick to also transition all children which have a transition material.
 Use this slider to visually debug the transition animation.
 
 **Update material list**<br>
-If you change the object hierachy then please click the 'Update material list' button to refresh the list of transitionable materials.
+If you change the object hierachy then please click this 'Update material list' button to refresh the list of transition materials.
