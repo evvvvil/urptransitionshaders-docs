@@ -65,7 +65,7 @@ Select which direction the transition will progress along the axis.
 Scale transition coverage to adjust amount of object revealed at the end of transition.
 
 **Gradient Length**<br>
-This option is only available when surface  type is set to 'Transparent'. 
+_This option is only available when surface  type is set to 'Transparent'._<br>
 Length of transition gradient. Lower number will make the transition gradient shorter.
 
 **Position Offset**<br>
@@ -86,7 +86,7 @@ Use shadow alpha clipping to fine tune the shadow's coverage. Same concept as 'A
 
 **Shadow Render face**<br>
 _This option is only available when surface render face is set to 'Front' or 'Back'._<br> 
-Only available when 'Render Face' in 'Surface Options' is not set to 'Both'. When rendering just the front or back face, shadows can appear cut off during transitions. Use this to override the render face setting for shadows to improve coverage. Flip the shadow render face or select both to ensure the shadow aligns with the mesh transition.
+When rendering just the front or back face, shadows can appear cut off during transitions. Use this to override the render face setting for shadows to improve coverage. Flip the shadow render face or select both to ensure the shadow aligns with the mesh transition.
 
 **Mirror Transition**<br>
 Mirror transition will fade both axis directions. For example to reveal an object from its center outwards vertically and in both up and down direction.
@@ -118,7 +118,9 @@ How much to colour the back face with the 'Backface Colour' defined above.
 Tint final colour with a flat silhouette colour to create an unlit silhouette look.
 
 **Silhouette Colour**<br>
+_This option is only available when silhouette tint is ON._<br> 
 Which colour to use as the silhouette tint colour.
 
 **Silhouette Amount**<br>
+_This option is only available when silhouette tint is ON._<br> 
 How much to tint the final colour with the 'Silhouette Colour' defined above.
