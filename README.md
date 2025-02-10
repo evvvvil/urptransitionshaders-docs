@@ -40,13 +40,13 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 
 5. Move the `Fader` slider to see the transition in effect. Change the `Scale` and `Position Offset` transition options to make sure your object fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the `Gradient Length` at yer leisure.
 
-6. If you are casting shadows then you should also change `Shadow scale` and `Shadow offset` separately from `Scale" and `Offset` above. That's because the shadow values will most likely have to be a bit different depending on your `Shadow cut off`, whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
+6. If you are casting shadows then you should also change `Shadow scale` and `Shadow offset` separately from `Scale` and `Offset` above. That's because the shadow values will most likely have to be a bit different depending on your `Shadow cut off`, whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
 
-7. Add the provided script "URPTransitionGroup" as a component to the mesh that has your new transition material. Alternatively you can also add the script to a parent of multiple meshes which have transition materials. This will create a `URPTransitionGroup`, ready to be faded in / out.<br>NOTE: You can visually check / debug multiple material transitions by adding `URPTransitionGroup` to a parent of meshes and using the script's `Transition Fader` under "DEBUG IN EDITOR". This is handy to visualise all your children material transition in one push of a fader.
+7. Add the provided script `URPTransitionGroup` as a component to the mesh that has your new transition material. Alternatively you can also add the script to a parent of multiple meshes which have transition materials. This will create a `URPTransitionGroup`, ready to be faded in / out.<br>NOTE: You can visually check / debug multiple material transitions by adding `URPTransitionGroup` to a parent of meshes and using the script's `Transition Fader` under "DEBUG IN EDITOR". This is handy to visualise all your children material transition in one push of a fader.
 
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
-8. Once you have created a URPTransitonGroup you can either:
+8. Once you have created a `URPTransitonGroup` you can either:
     - write your own logic to transition/fade in or out your meshes by calling `URPTransitonGroup`'s transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
     - Use `URPTransitonGroup` inspector UI options to create transition from start without having to write any code.
 
