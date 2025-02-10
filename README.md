@@ -155,4 +155,4 @@ Tick to also transition all children which have a transition material.
 Use this slider to visually debug the transition animation.
 
 **Update material list**<br>
-If you change the object hierachy then please click this 'Update material list' button to refresh the list of transition materials.
+If you change the object hierachy, such as chaging children materials or adding new children, then please click this 'Update material list' button to refresh the list of transition materials. You only need to worry about updating list of materials when in editor mode. When game styart the list of material will be updated automatically.
