@@ -18,15 +18,19 @@ Import the URP-Transition-Shaders package. You should now have new shader option
 
 1. Create a new material in Unity or select an existing material which is using "Lit".
 
-2. Switch the material's shader from "Lit" to "Lit-transition": click shader dropdown on the top of material and in  "Universal Render Pipeline" menu select "Lit-transition".
+2. Switch the material's shader from "Lit" to "Lit-transition": click shader dropdown on the top of material and in "Universal Render Pipeline" menu select "Lit-transition".
 
 3. If you are editing an existing "Lit" material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out "Transition Options" in your material inspector panel.
 
 4. Move the "Fader" slider to see the transition in effect. Change the "Scale" and "Position Offset" transition options to make sure your object fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the "Gradient Length" at yer leisure.
 
-5. If you are casting shadows then you should also change "Shadow scale" and "Shadow offset" separately from "Scale" and "Offset" above. That's because the shadow values will most likely have to be a bit different depending on your "Shadow cut off", whether you have transparency and other factors. Start with the shadow scale and offset  same as the scale / offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
+5. If you are casting shadows then you should also change "Shadow scale" and "Shadow offset" separately from "Scale" and "Offset" above. That's because the shadow values will most likely have to be a bit different depending on your "Shadow cut off", whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
 
-6. Add the provided script "URPTransitionGroup" as a component to your
+6. Add the provided script "URPTransitionGroup" as a component to the mesh that has your new transition material. You can also add the script to a parent of multiple meshes which have transition materials. This will create a URPTransitionGRoup, ready to be faded in / out.
+
+7. Once you have created a URPTransitonGroup, write your own logic to transition/fade in or out your meshes by calling URPTransitonGroup's transition functions "FadeIn(float duration)" or "FadeOut(float duration)". 
+
+8. You can also use URPTransitionGroup 
 
 ## Transition Options:
 
@@ -104,7 +108,6 @@ _This option is only available when slant transition is ON._<br>
 Slant amount, and also direction. The slant angle direction will depend on this value being positive or negative.
 
 **Backface colour**
-
 _This option is only available when surface render face is set to 'Both'._<br> 
 You can colour the back face of your double sided object during the transition to give it a more tidy / stencil look.
 
