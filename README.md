@@ -28,7 +28,7 @@ Import the URP-Transition-Shaders package. You should now have new shader option
 
 6. Add the provided script "URPTransitionGroup" as a component to your
 
-Transition Options:
+## Transition Options:
 
 **Fader** 
 
