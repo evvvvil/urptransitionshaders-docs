@@ -13,7 +13,7 @@ Import the URP-Transition-Shaders package. You should now have new shader option
 
 ![alt text](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Screenshot01.png?raw=true)
 
-![alt text](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Screenshot02.png?raw=true)
+![alt text](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Screenshot03.png?raw=true)
 
 
 1. Create a new material in Unity or select an existing material which is using "Lit".
