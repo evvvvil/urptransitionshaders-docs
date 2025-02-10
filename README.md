@@ -147,7 +147,10 @@ How much to tint the final colour with the `Silhouette Colour` defined above.
 ![URPTransitionGroup options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
 **Action on start**<br>
-What happens when the game starts.`Nothing` does nothing. `Hide on start` hides all transition materials on start. `Transition on start` fades in all transition materials on start. Set transition duration and delay transition start as an option.
+What happens when the game starts:
+-`Nothing` does nothing. 
+-`Hide on start` hides all transition materials on start.
+-`Transition on start` fades in all transition materials on start. Transition animation will have a duration of `Transition on start duration` and be delayed by `Transition on start delay`.
 
 **Transition on start duration**<br>
 Duration of the start transition (in seconds).
@@ -165,4 +168,4 @@ Tick to also transition all children which have a transition material.
 Use this slider to visually debug the transition animation.
 
 **Update material list**<br>
-If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials. NOTE: You only need to worry about updating list of materials when in editor mode. When the game starts the list of material will be automatically updated.
+If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials.<br>NOTE: You only need to worry about updating list of materials when in editor mode. When the game starts the list of material will be automatically updated.
