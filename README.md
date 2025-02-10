@@ -47,7 +47,7 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
 8. Once you have created a `URPTransitonGroup` you can either:
-    - write your own logic to transition/fade in or out your meshes by calling `URPTransitonGroup`'s transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
+    - Write your own logic to transition/fade in or out your meshes by calling `URPTransitonGroup`'s transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
     - Use `URPTransitonGroup` inspector UI options to create transition from start without having to write any code.
 
 9. See the `ExampleTransition` scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
