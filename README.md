@@ -9,14 +9,13 @@ The idea isn't to rewrite URP shaders such as lit and unlit but to surgically ad
 
 ## How to use:
 
-Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's "Shader" dropdown. In "Universal Render Pipeline" menu you now have new transition shaders such as "Lit-Transition" and "Unlit-Transition". :star_struck:
+1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's "Shader" dropdown. In "Universal Render Pipeline" menu you now have new transition shaders such as "Lit-Transition" and "Unlit-Transition". :star_struck:
 
-![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Screenshot01.png?raw=true)
+![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Img01.png?raw=true)
 
-![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Screenshot03.png?raw=true)
+![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Img02.png?raw=true)
 
-
-1. Create a new material in Unity or select an existing material which is using "Lit".
+2. Create a new material in Unity or select an existing material which is using "Lit".
 
 2. Switch the material's shader from "Lit" to "Lit-transition": click shader dropdown on the top of material and in "Universal Render Pipeline" menu select "Lit-transition".
 
@@ -33,6 +32,8 @@ Import the URP-Transition-Shaders package. You should now have new shader option
 8. You can also use URPTransitionGroup 
 
 ## Transition Options:
+
+![New otpions available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/Img03.png?raw=true)
 
 **Fader**<br>
 Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the 'Scale' and 'Position Offset' to achieve this, based on your 'Axis', 'Direction', etc.
