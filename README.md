@@ -26,35 +26,35 @@ Surgically adds transition feature into URP shaders without disturbing "that tas
 
 ## How to use:
 
-1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's "Shader" dropdown. In "Universal Render Pipeline" menu you now have new transition shaders such as "Lit-Transition" and "Unlit-Transition". :star_struck:
+1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's `Shader` dropdown. In `Universal Render Pipeline` category you now have new transition shaders such as `Lit-Transition` and `Unlit-Transition`. :star_struck:
 
 ![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img01.png?raw=true)
 
 ![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.png?raw=true)
 
-2. Create a new material in Unity or select an existing material which is using "Lit".
+2. Create a new material in Unity or select an existing material which is using `Lit`.
 
-2. Switch the material's shader from "Lit" to "Lit-transition": click shader dropdown on the top of material and in "Universal Render Pipeline" menu select "Lit-transition".
+3. Switch the material's shader from `Lit` to `Lit-transition`: click shader dropdown on the top of material and in `Universal Render Pipeline` category select `Lit-transition`.
 
-3. If you are editing an existing "Lit" material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out "Transition Options" in your material inspector panel.
+4. If you are editing an existing `Lit` material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out `Transition Options` in your material inspector panel.
 
-4. Move the "Fader" slider to see the transition in effect. Change the "Scale" and "Position Offset" transition options to make sure your object fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the "Gradient Length" at yer leisure.
+5. Move the `Fader` slider to see the transition in effect. Change the `Scale` and `Position Offset` transition options to make sure your object fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the `Gradient Length` at yer leisure.
 
-5. If you are casting shadows then you should also change "Shadow scale" and "Shadow offset" separately from "Scale" and "Offset" above. That's because the shadow values will most likely have to be a bit different depending on your "Shadow cut off", whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
+6. If you are casting shadows then you should also change `Shadow scale` and `Shadow offset` separately from `Scale" and `Offset` above. That's because the shadow values will most likely have to be a bit different depending on your `Shadow cut off`, whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
 
-6. Add the provided script "URPTransitionGroup" as a component to the mesh that has your new transition material. Alternatively you can also add the script to a parent of multiple meshes which have transition materials. This will create a URPTransitionGroup, ready to be faded in / out. NOTE: You can visually check / debug multiple material transitions by adding "URPTransitionGroup" to a parent of meshes and using the script "Transition Fader" under "DEBUG IN EDITOR". This is handy to visualise all your children material transition in one push of a fader.
+7. Add the provided script "URPTransitionGroup" as a component to the mesh that has your new transition material. Alternatively you can also add the script to a parent of multiple meshes which have transition materials. This will create a `URPTransitionGroup`, ready to be faded in / out.<br>NOTE: You can visually check / debug multiple material transitions by adding `URPTransitionGroup` to a parent of meshes and using the script's `Transition Fader` under "DEBUG IN EDITOR". This is handy to visualise all your children material transition in one push of a fader.
 
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
-7. Once you have created a URPTransitonGroup you can either:
-    - write your own logic to transition/fade in or out your meshes by calling URPTransitonGroup's transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
-    - Use URPTransitonGroup inspector UI options to create transition from start without having to write any code.
+8. Once you have created a URPTransitonGroup you can either:
+    - write your own logic to transition/fade in or out your meshes by calling `URPTransitonGroup`'s transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
+    - Use `URPTransitonGroup` inspector UI options to create transition from start without having to write any code.
 
-8. See the `ExampleTransition` scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
+9. See the `ExampleTransition` scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
 
 ## Transition Easing:
 
-You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down setting which easing will be used with "Transition on start" as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`.
+You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down that sets which easing will be used with `Transition on start` as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`. Know yer easing: https://easings.net/
 
 ## Final Notes:
 
@@ -140,7 +140,7 @@ Which colour to use as the silhouette tint colour.
 
 **Silhouette Amount**<br>
 _This option is only available when `Silhouette tint` is ON._<br> 
-How much to tint the final colour with the 'Silhouette Colour' defined above.
+How much to tint the final colour with the `Silhouette Colour` defined above.
 
 ## URPTransitionGroup Options:
 
@@ -165,4 +165,4 @@ Tick to also transition all children which have a transition material.
 Use this slider to visually debug the transition animation.
 
 **Update material list**<br>
-If you change the object hierachy, such as chaging children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials. NOTE: You only need to worry about updating list of materials when in editor mode. When the game starts the list of material will be automatically updated.
+If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials. NOTE: You only need to worry about updating list of materials when in editor mode. When the game starts the list of material will be automatically updated.
