@@ -19,7 +19,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 - Transition along local or world axis
 - Transitions shadows and depth as well
 - Mirrored, slanted and other transition effects
-- Use the provided URPTransitionGroup script to build your own logic
+- Use the provided `URPTransitionGroup` script, then build your own logic
 - Or create sequences to fade on start without writing any code
 - Reveal huge part of a level in a sequence or just individual objects 
 - "Silhouette" shader option to flash object to unlit plain colour
