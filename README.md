@@ -5,8 +5,8 @@
 ## What does it do?
 
 Extends URP shaders to add a transiton feature to reveal / fade any object or group of objects.<br>
-Retains all URP material features intact such as: lighting, surface options, surface inputs.<br>
-Surgically adds transition feature into URP shaders without disturbing "that tasty URP sauce".
+Retains all URP material features intact such as: lighting, surface options, surface inputs, etc.<br>
+Surgically adds the transition feature into URP shaders without disturbing "that tasty URP sauce".
 
 Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com/watch?v=O7nvYtbpcAo).
 
@@ -23,6 +23,8 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 - Or create sequences to fade on start without writing any code
 - Reveal huge part of a level in a sequence or just individual objects 
 - "Silhouette" shader option to flash object to unlit plain colour
+- Written in HLSL shader code: nae ShaderGraph bloated nonsense, nae overheads
+- All URP material features intact: lighting, surface options, surface inputs, SRP batcher compatible, etc.
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-03.jpg?raw=true)
 
