@@ -36,13 +36,13 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.png?raw=true)
 
-2. Create a new material in Unity or select an existing material which is using `Lit` / `Unlit`. (For this step by step guide we will assume we are using `Lit` not `Unlit`, as `Lit` has more options)
+2. Create a new material in Unity or select an existing material which is using `Lit` / `Unlit` / `SimpleLit` / `ComplexLit`. (For this step by step guide we will assume we are using `Lit`)
 
 3. Switch the material's shader from `Lit` to `Lit-Transition`: click shader dropdown on the top of material and in `Universal Render Pipeline` category select `Lit-Transition`.
 
 4. If you are editing an existing `Lit` material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out `Transition Options` in your material inspector panel.
 
-5. Move the `Fader` slider to see the transition in effect. Change the `Scale` and `Position Offset` transition options to make sure your object fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the `Gradient Length` at yer leisure.
+5. Move the `Fader` slider to see the transition in effect. Change the `Scale` and `Position Offset` transition options to make sure your object is fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the `Gradient Length` at yer leisure.
 
 6. If you are casting shadows then you should also change `Shadow scale` and `Shadow offset` separately from `Scale` and `Offset` above. That's because the shadow values will most likely have to be a bit different depending on your `Shadow cut off`, whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
 
@@ -51,7 +51,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
 8. Once you have created a `URPTransitonGroup` you can either:
-    - Write your own logic to transition/fade in or out your meshes by calling `URPTransitonGroup`'s transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
+    - Write your own logic to transition / fade in or out your meshes by calling `URPTransitonGroup`'s transition functions `FadeIn(float duration)` or `FadeOut(float duration)`
     - Use `URPTransitonGroup` inspector UI options to create transition from start without having to write any code.
 
 9. See the `ExampleTransition` scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
@@ -64,7 +64,7 @@ You can set which type of animation easing for your material transition in the `
 
 To achieve smooth transparency without a hard edge use surface type `Transparent` with `Alpha` blend mode and UNTICK `Preserve specular lighting`.
 
-In UNLIT and deferred, if you see black areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold.
+In UNLIT and DEFERRED, if you see black areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold.
 
 Do read the `Shadow render face` paragraph in the "Transition Options" below. You might have to flip shadow render face or render both to match yer shadow and mesh transitions.
 
@@ -85,14 +85,14 @@ Select which axis to do the transition along.
 Select which direction the transition will progress along the axis.
 
 **Scale**<br>
-Scale transition coverage to adjust amount of object revealed at the end of transition.
+Scale transition coverage to adjust amount of object revealed at the end of transition. This value influences how much to show when `Fader` value is 1.
+
+**Position Offset**<br>
+Offset start position of transition. This value influences how little to show when `Fader` value is 0. Example: if object is centrally aligned (axis / center point at center) but you want to transition from the bottom then change this value down to shift transition start to bottom.
 
 **Gradient Length**<br>
 _This option is only available when surface  type is set to `Transparent`._<br>
 Length of transition gradient. Lower number will make the transition gradient shorter.
-
-**Position Offset**<br>
-Offset start position of transition. Example: if object is centrally aligned (axis / center point at center) but you want to transition from the bottom then change this value down to shift transition start to bottom.
 
 **Write Depth**<br>
 Forces depth write on this material. Tick this to resolve depth issues with transparent meshes, such as when multiple overlapping meshes share the same transition material.
@@ -105,10 +105,10 @@ _This option is only available when `Mirror Transition` is ON._<br>
 Offset start of mirror effect. Useful when `Direction` is `Negative` - should be close to 0 when `Positive`. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
 
 **Shadow Scale**<br>
-Same as `Scale` but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Scale` above however it depends on your `Shadow Alpha Clipping` value.
+Same as `Scale` but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Scale` however it depends on your `Shadow Alpha Clipping` value.
 
 **Shadow Offset**<br>
-Same as `Position Offset` but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Position Offset`.
+Same as `Position Offset` but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Start at 0 and tinker the value, which depends on your `Shadow Alpha Clipping` value.
 
 **Shadow Alpha Clipping**<br>
 _This option is only available when surface render face is set to `Front` or `Back`._<br> 
