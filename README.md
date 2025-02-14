@@ -192,7 +192,7 @@ If you change the object hierachy, such as changing children materials or adding
 ## URPTransitionGroup Public Methods:
 
 **FadeIn(float duration)**
-Start the transition fade from 0 to 1, animated over a duration of `duration` (in seconds).
+Start the transition fade from 0 to 1, animated over a duration of `duration` (in seconds) AND using the `Transition Ease` set above.
 
 **FadeOut(float duration)**
-Start the transition fade from 1 to 0, animated over a duration of `duration` (in seconds).
+Start the transition fade from 1 to 0, animated over a duration of `duration` (in seconds) AND using the `Transition Ease` set above.
