@@ -4,7 +4,7 @@
  
 ## What does it do?
 
-Users can transition, reveal and fade objects along an axis. Extends all major URP shaders, such as "Lit", while maintaining key shader features like lighting, surface inputs, etc. Works with shadows!<br>
+Users can transition, reveal and fade meshes along an axis. Extends all major URP shaders, such as "Lit", while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!<br>
 Surgically adds the transition feature into URP shaders without disturbing "that tasty URP sauce".
 
 Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com/watch?v=O7nvYtbpcAo).
@@ -31,15 +31,15 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ## How to use:
 
-1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's `Shader` dropdown. In `Universal Render Pipeline` category you now have new transition shaders such as `Lit-Transition` and `Unlit-Transition`. :star_struck:
+1. Import the "URP Transition Shaders" package. You will then have new shader options available for any Unity material. In the `Shader` dropdown of any material, in the `Universal Render Pipeline` category, new shaders are: `Lit-Transition`, `SimpleLit-Transition`, `ComplexLit-Transition`, `BakedLit-Transition`  and `Unlit-Transition`. :star_struck:
 
 ![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-01.jpg?raw=true)
 
 ![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-02.jpg?raw=true)
 
-2. Create a new material in Unity or select an existing material which is using `Lit` / `Unlit` / `SimpleLit` / `ComplexLit`. (For this step by step guide we will assume we are using `Lit`)
+2. Create a new material in Unity or select an existing material which is using `Lit` / `Unlit` / `SimpleLit` / `ComplexLit` / `BakedLit`. (For the purpose of this step by step guide, we will assume we are using `Lit`)
 
-3. Switch the material's shader from `Lit` to `Lit-Transition`: click shader dropdown on the top of material and in `Universal Render Pipeline` category select `Lit-Transition`.
+3. Switch the material's shader from `Lit` to `Lit-Transition`: click shader dropdown on the top of material and in the `Universal Render Pipeline` category, select `Lit-Transition`.
 
 4. If you are editing an existing `Lit` material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out `Transition Options` in your material inspector panel.
 
@@ -68,7 +68,13 @@ Depending on your scene, you might get depth issues due to transparency, such as
 
 ## Shadow Render face
 
-Do read the `Shadow render face` paragraph in the "Transition Options" below. You might have to flip shadow render face or render both to match yer shadow and mesh transitions.
+When rendering just the front or back face of a mesh, it's possible for shadows to appear cut off / half missing during the transitions. See image below as an example:
+
+![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-01.png?raw=true)
+
+Use `Shadow render face` to override the render face setting for shadows. Flip to `Back` or select `Both` to ensure the shadow fix the shadow coverage.See image example below with `Shadow render face` set to `Back` and `Render face` set to `Front`:
+
+![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-02.png?raw=true)
 
 ##  Unlit and deferred rendering quirk:
 
