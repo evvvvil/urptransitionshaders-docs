@@ -11,7 +11,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-01.jpg?raw=true)
 
-# Features:
+## Features:
 - Transition, reveal, fade in or out any mesh or group of meshes
 - Keeps all URP shader features intact, such as lighting and material options
 - Transitions shadows and depth as well
