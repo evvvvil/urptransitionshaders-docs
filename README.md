@@ -20,7 +20,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 - Reveal huge parts of a level in a sequence or individual objects
 - Transparent smooth alpha transition fade
 - Opaque sliced transition with 'inside' colouring
-- Seamless shader switch: I.E: existing "Lit" shader material maps & values carry over when switching to "LIt-Transition" shader
+- Seamless shader switch: I.E: existing `Lit` shader material maps & values carry over when switching to `Lit-Transition` shader
 - Mirrored, slanted and other transition effects
 - C# class `URPTransitionGroup` provided to help you build your own logic
 - Or create sequences to fade on start without writing any code
