@@ -4,7 +4,8 @@
  
 ## What does it do?
 
-Users can transition, reveal and fade meshes along an axis. Extends all major URP shaders, such as `Lit`, while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!<br>
+Users can transition, reveal and fade meshes along an axis. Extends all major URP shaders, such as `Lit`, while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!
+
 TL;DR: Surgically adds wicked transitions into URP shaders without disturbing "that tasty URP sauce".
 
 Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com/watch?v=O7nvYtbpcAo).
