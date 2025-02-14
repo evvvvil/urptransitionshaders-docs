@@ -31,9 +31,9 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's `Shader` dropdown. In `Universal Render Pipeline` category you now have new transition shaders such as `Lit-Transition` and `Unlit-Transition`. :star_struck:
 
-![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img01.jpg?raw=true)
+![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-01.jpg?raw=true)
 
-![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.jpg?raw=true)
+![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-02.jpg?raw=true)
 
 2. Create a new material in Unity or select an existing material which is using `Lit` / `Unlit` / `SimpleLit` / `ComplexLit`. (For this step by step guide we will assume we are using `Lit`)
 
