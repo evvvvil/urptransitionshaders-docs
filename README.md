@@ -43,6 +43,8 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 4. If you are editing an existing `Lit` material then all the maps and values should stay the same. :rowing_woman: Your material's look will stay intact. You should now see a new fold out `Transition Options` in your material inspector panel.
 
+![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-transition-options.jpg?raw=true)
+
 5. Move the `Fader` slider to see the transition in effect. Change the `Scale` and `Position Offset` transition options to make sure your object is fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the `Gradient Length` at yer leisure.
 
 6. If you are casting shadows then you should also change `Shadow scale` and `Shadow offset` separately from `Scale` and `Offset` above. That's because the shadow values will most likely have to be a bit different depending on your `Shadow cut off`, whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
