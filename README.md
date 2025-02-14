@@ -74,7 +74,7 @@ When rendering just the front or back face of a mesh, it's possible for shadows 
 
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-01.jpg?raw=true)
 
-Use `Shadow render face` to override the render face setting for shadows. Flip to `Back` or select `Both` to ensure the shadow fix the shadow coverage.See image example below with `Shadow render face` set to `Back` and `Render face` set to `Front`:
+Use `Shadow render face` to override the render face setting for shadows. Flip to `Back` or select `Both` to fix the shadow coverage. See image example below with `Shadow render face` set to `Back` and `Render face` set to `Front`:
 
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-02.jpg?raw=true)
 
@@ -129,7 +129,7 @@ Use shadow alpha clipping to fine tune the shadow's coverage. Same concept as `A
 
 **Shadow Render face**<br>
 _This option is only available when surface render face is set to `Front` or `Back`._<br> 
-When rendering just the front or back face, shadows can appear cut off during transitions. Use this to override the render face setting for shadows to improve coverage. Flip the shadow render face or select both to ensure the shadow aligns with the mesh transition.
+When rendering just the front or back face of a mesh, it's possible for shadows to appear cut off / half missing during the transitions.<br> Use `Shadow render face` to override the render face setting for shadows. Flip to `Back` or select `Both` to fix the shadow coverage.
 
 **Slant Transition**<br>
 Slant / angle transition with a diagonal cut along another axis.
