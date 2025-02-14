@@ -72,11 +72,11 @@ Depending on your scene, you might get depth issues due to transparency, such as
 
 When rendering just the front or back face of a mesh, it's possible for shadows to appear cut off / half missing during the transitions. See image below as an example:
 
-![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-01.png?raw=true)
+![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-01.jpg?raw=true)
 
 Use `Shadow render face` to override the render face setting for shadows. Flip to `Back` or select `Both` to ensure the shadow fix the shadow coverage.See image example below with `Shadow render face` set to `Back` and `Render face` set to `Front`:
 
-![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-02.png?raw=true)
+![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-02.jpg?raw=true)
 
 ##  Unlit and deferred rendering quirk:
 
