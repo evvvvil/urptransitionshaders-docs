@@ -184,7 +184,7 @@ Choose a type of easing for the transition animation.
 Tick to also transition all children which have a transition material.
 
 **DEBUG IN EDITOR - Transition fader**<br>
-Use this slider to visually debug the transition animation.
+Use this slider to visually debug the transition animation of ALL children materials.<br>This is handy to visualise all your children material transition in one push of a fader.
 
 **Update material list**<br>
 If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials.<br>NOTE: You only need to worry about updating list of materials when in editor mode. When the game starts the list of material will be automatically updated.
