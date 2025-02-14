@@ -1,11 +1,10 @@
 # **URP Transition Shaders Documentation**
 
-![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-02.jpg?raw=true)
+![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-main.jpg?raw=true)
  
 ## What does it do?
 
-Extends URP shaders to add a transiton feature to reveal / fade any object or group of objects.<br>
-Retains all URP material features intact such as: lighting, surface options, surface inputs, etc.<br>
+Users can transition, reveal and fade objects along an axis. Extends all major URP shaders, such as "Lit", while maintaining key shader features like lighting, surface inputs, etc. Works with shadows!<br>
 Surgically adds the transition feature into URP shaders without disturbing "that tasty URP sauce".
 
 Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com/watch?v=O7nvYtbpcAo).
@@ -32,9 +31,9 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 1. Import the URP-Transition-Shaders package. You should now have new shader options in any Unity material's `Shader` dropdown. In `Universal Render Pipeline` category you now have new transition shaders such as `Lit-Transition` and `Unlit-Transition`. :star_struck:
 
-![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img01.png?raw=true)
+![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img01.jpg?raw=true)
 
-![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.png?raw=true)
+![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img02.jpg?raw=true)
 
 2. Create a new material in Unity or select an existing material which is using `Lit` / `Unlit` / `SimpleLit` / `ComplexLit`. (For this step by step guide we will assume we are using `Lit`)
 
@@ -60,13 +59,18 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down that sets which easing will be used with `Transition on start` as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`. [Know yer easing](https://easings.net/), yeah? 
 
-## Final Notes:
+## Smooth transparency and depth:
 
 To achieve smooth transparency without a hard edge use surface type `Transparent` with `Alpha` blend mode and UNTICK `Preserve specular lighting`.
+Depending on your scene, you might get depth issues due to transparency, such as when multiple overlapping meshes share the same `Transparent` surface materials. Tick `Write depth` to force depth write on your transition materials to ressolve meshes overlapping.
 
-In UNLIT and DEFERRED, if you see black areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold.
+## Shadow Render face
 
 Do read the `Shadow render face` paragraph in the "Transition Options" below. You might have to flip shadow render face or render both to match yer shadow and mesh transitions.
+
+##  Unlit and deferred rendering quirk:
+
+When using `Unlit-Transition` in DEFERRED rendering mode, if you see dark areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold. For example with `Alpha clipping` threshold of 0.5, drop the `Base Color` alpha channel to just below 50% and the dark area will become transparent.
 
 ## Transition Options:
 
@@ -111,7 +115,6 @@ Same as `Scale` but for shadows. It lets you adjust the shadow transition scale 
 Same as `Position Offset` but for shadow. It lets you adjust the shadow position start offset separately to fine tune the shadow transition and align it with the mesh transition. Start at 0 and tinker the value, which depends on your `Shadow Alpha Clipping` value.
 
 **Shadow Alpha Clipping**<br>
-_This option is only available when surface render face is set to `Front` or `Back`._<br> 
 Use shadow alpha clipping to fine tune the shadow's coverage. Same concept as `Alpha Clipping` in 'Surface Options', however this only affect the shadow and doesn't require `Alpha Clipping` to be on. Try a value of 0.5 to start off and tweak to get a thinner or wider shadow.
 
 **Shadow Render face**<br>
