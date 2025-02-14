@@ -12,18 +12,20 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-01.jpg?raw=true)
 
 # Features:
-- Transparent smooth alpha transition fade
-- Opaque transition with 'inside' colouring
-- Seamless shader switch: material maps and values carry over, so you dont have to redesign your materials
-- Transition along local or world axis
+- Transition, reveal, fade in or out any mesh or group of meshes
+- Keeps all URP shader features intact, such as lighting and material options
 - Transitions shadows and depth as well
+- Transition along local or world axis
+- Reveal huge parts of a level in a sequence or individual objects
+- Transparent smooth alpha transition fade
+- Opaque sliced transition with 'inside' colouring
+- Seamless shader switch: I.E: existing "Lit" shader material maps & values carry over when switching to "LIt-Transition" shader
 - Mirrored, slanted and other transition effects
-- Use the provided `URPTransitionGroup` script, then build your own logic
+- C# class `URPTransitionGroup` provided to help you build your own logic
 - Or create sequences to fade on start without writing any code
-- Reveal huge part of a level in a sequence or just individual objects 
-- "Silhouette" shader option to flash object to unlit plain colour
-- Written in HLSL shader code: nae ShaderGraph bloated nonsense, nae overheads
-- All URP material features intact: lighting, surface options, surface inputs, SRP batcher compatible, etc.
+- "Silhouette" shader option to flash & highlight a mesh with a plain colour (extra)
+- Written in pure HLSL shader code - no overheads
+- SRP batcher compatible
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-03.jpg?raw=true)
 
