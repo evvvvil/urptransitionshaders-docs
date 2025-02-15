@@ -3,8 +3,8 @@
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-main.jpg?raw=true)
  
 ## Table of contents:
- 1. [What does it do?](#What-does-it-do?)
-2. Features
+1. [What does it do?](#What-does-it-do?)
+2. [Features](#2.-Features:)
 3. How to use
 4. Transition Easing
 5. Smooth transparency and depth
@@ -14,7 +14,7 @@
 9. URPTransitionGroup Option
 10. URPTransitionGroup Public Methods
 
-## What does
+## What does it do?
 
 Users can transition, reveal and fade meshes along an axis. Extends all major URP shaders, such as `Lit`, while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!
 
