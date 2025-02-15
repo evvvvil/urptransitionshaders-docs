@@ -11,7 +11,7 @@
 6. [Shadow Render face](#6-shadow-render-face)
 7. [Unlit and deferred rendering quirk](#7-unlit-and-deferred-rendering-quirk)
 8. [Transition Options](#8-transition-options)
-9. [URPTransitionGroup Option](#9-urptransitionGroup-option)
+9. [URPTransitionGroup Option](#9-urptransitiongroup-option)
 10. [URPTransitionGroup Public Methods](#10-urptransitiongroup-public-methods)
 
 ## 1. What does it do?
