@@ -4,7 +4,7 @@
  
 ## Table of contents:
 1. [What does it do?](#What-does-it-do?)
-2. [Features](#2-Features:)
+2. [Features](#2-Features)
 3. How to use
 4. Transition Easing
 5. Smooth transparency and depth
