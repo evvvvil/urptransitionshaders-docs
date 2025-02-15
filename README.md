@@ -4,7 +4,7 @@
  
 ## Table of contents:
 1. [What does it do?](#What-does-it-do?)
-2. [Features](#2Features:)
+2. [Features](#2-Features:)
 3. How to use
 4. Transition Easing
 5. Smooth transparency and depth
@@ -22,7 +22,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-01.jpg?raw=true)
 
-## 2Features:
+## 2 Features:
 - Transition, reveal, fade in or out any mesh or group of meshes
 - Keeps all URP shader features intact, such as lighting and material options
 - Transitions shadows and depth as well
