@@ -2,7 +2,19 @@
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-main.jpg?raw=true)
  
-## What does it do?
+## Table of contents:
+1. What does it do?
+2. Features
+3. How to use
+4. Transition Easing
+5. Smooth transparency and depth
+6. Shadow Render face
+7. Unlit and deferred rendering quirk
+8. Transition Options
+9. URPTransitionGroup Option
+10. URPTransitionGroup Public Methods
+
+## 1. What does it do?
 
 Users can transition, reveal and fade meshes along an axis. Extends all major URP shaders, such as `Lit`, while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!
 
@@ -10,7 +22,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-01.jpg?raw=true)
 
-## Features:
+## 2. Features:
 - Transition, reveal, fade in or out any mesh or group of meshes
 - Keeps all URP shader features intact, such as lighting and material options
 - Transitions shadows and depth as well
@@ -28,7 +40,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-03.jpg?raw=true)
 
-## How to use:
+## 3. How to use:
 
 1. Import the "URP Transition Shaders" package. You will then have new shader options available for any Unity material. In the `Shader` dropdown of any material inspector, in the `Universal Render Pipeline` category, new shaders are: `Lit-Transition`, `SimpleLit-Transition`, `ComplexLit-Transition`, `BakedLit-Transition`  and `Unlit-Transition`. :star_struck:
 
@@ -58,7 +70,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 9. See the `ExampleTransition` scene in URPTransitionShaders/scenes/ExampleTransition for an example on how to use this package.
 
-## Transition Easing:
+## 4. Transition Easing:
 
 You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down that sets which easing will be used with `Transition on start` as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`. [Know yer easing](https://easings.net/), yeah? 
 
