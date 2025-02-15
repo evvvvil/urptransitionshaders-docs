@@ -6,8 +6,6 @@
 
 Users can transition, reveal and fade meshes along an axis. Extends all major URP shaders, such as `Lit`, while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!
 
-TL;DR: Surgically adds wicked transitions into URP shaders without disturbing "that tasty URP sauce".
-
 Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com/watch?v=O7nvYtbpcAo).
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-01.jpg?raw=true)
@@ -32,7 +30,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ## How to use:
 
-1. Import the "URP Transition Shaders" package. You will then have new shader options available for any Unity material. In the `Shader` dropdown of any material, in the `Universal Render Pipeline` category, new shaders are: `Lit-Transition`, `SimpleLit-Transition`, `ComplexLit-Transition`, `BakedLit-Transition`  and `Unlit-Transition`. :star_struck:
+1. Import the "URP Transition Shaders" package. You will then have new shader options available for any Unity material. In the `Shader` dropdown of any material inspector, in the `Universal Render Pipeline` category, new shaders are: `Lit-Transition`, `SimpleLit-Transition`, `ComplexLit-Transition`, `BakedLit-Transition`  and `Unlit-Transition`. :star_struck:
 
 ![New options available in material shader dropdown](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-01.jpg?raw=true)
 
@@ -46,11 +44,11 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-transition-options.jpg?raw=true)
 
-5. Move the `Fader` slider to see the transition in effect. Change the `Scale` and `Position Offset` transition options to make sure your object is fully hidden at fader value 0 and fully shown at fader value 1. If you have transparent material then change the `Gradient Length` at yer leisure.
+5. Move the `Fader` slider to see the transition in effect. Change the `Scale` and `Position Offset` transition options to make sure your object is fully hidden at fader value 0 and fully shown at fader value 1. If you have a transparent material then change the `Gradient Length` at your leisure.
 
 6. If you are casting shadows then you should also change `Shadow scale` and `Shadow offset` separately from `Scale` and `Offset` above. That's because the shadow values will most likely have to be a bit different depending on your `Shadow cut off`, whether you have transparency and other factors. Start with the shadow scale and offset same as the scale / position offset values above and tinker with the values until you're happy the shadow transition animation matches your mesh transition animation. 
 
-7. Add the provided script `URPTransitionGroup` as a component to the mesh that has your new transition material. Alternatively you can also add the script to a parent of multiple meshes which have transition materials. This will create a `URPTransitionGroup`, ready to be faded in / out.<br>NOTE: You can visually check / debug multiple material transitions by adding `URPTransitionGroup` to a parent of meshes and using the script's `Transition Fader` under "DEBUG IN EDITOR". This is handy to visualise all your children material transition in one push of a fader.
+7. Add the provided script `URPTransitionGroup` as a component to the mesh that has your new transition material. Alternatively you can also add the script to a parent of multiple meshes which have transition materials. This will create a `URPTransitionGroup`, ready to be faded in / out.<br>NOTE: You can visually check / debug multiple material transitions by adding `URPTransitionGroup` to a parent of meshes and using the script's `Transition Fader` under "DEBUG IN EDITOR". This is handy to visualise all your children's material transition in one push of a fader.
 
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
@@ -91,7 +89,7 @@ When using `Unlit-Transition` in DEFERRED rendering mode, if you see dark areas 
 Animate from 0 to 1 to reveal the transition. This is your main transition 'fader'. Your object should be hidden at 0 and fully shown at 1. Change the `Scale` and `Position Offset` to achieve this, based on your `Axis`, `Direction`, etc.
 
 **Mode**<br>
-Transition uses local or world axis. Use world axis to transition multiple meshes along in a sequence after each other.
+Transition uses local or world axes. Use the world axis to transition multiple meshes along in a sequence after each other.
 
 **Axis**<br>
 Select which axis to do the transition along.
@@ -100,14 +98,14 @@ Select which axis to do the transition along.
 Select which direction the transition will progress along the axis.
 
 **Scale**<br>
-Scale transition coverage to adjust amount of object revealed at the end of transition. This value influences how much to show when `Fader` value is 1.
+Scale transition coverage to adjust the amount of the object is revealed at the end of transition. This value influences how much to show when `Fader` value is 1.
 
 **Position Offset**<br>
-Offset start position of transition. This value influences how little to show when `Fader` value is 0. Example: if object is centrally aligned (axis / center point at center) but you want to transition from the bottom then change this value down to shift transition start to bottom.
+Offset start position of transition. This value influences how little to show when the Fader `value` is 0. Example: if the object is centrally aligned (axis / center point at center) but you want to transition from the bottom then change this value down to shift transition start to bottom.
 
 **Gradient Length**<br>
 _This option is only available when surface  type is set to `Transparent`._<br>
-Length of transition gradient. Lower number will make the transition gradient shorter.
+Length of the transition gradient. Lower numbers will make the transition gradient shorter.
 
 **Write Depth**<br>
 Forces depth write on this material. Tick this to resolve depth issues with transparent meshes, such as when multiple overlapping meshes share the same transition material.
@@ -117,7 +115,7 @@ Mirror transition will fade both axis directions. For example to reveal an objec
 
 **Mirror Offset**<br>
 _This option is only available when `Mirror Transition` is ON._<br> 
-Offset start of mirror effect. Useful when `Direction` is `Negative` - should be close to 0 when `Positive`. Change this to pull in or push out the start of mirror effect. Combine this value - to hide enough of object at the start of transition, and the scale value to reveal enough of the object at the end.
+Offset start of mirror effect. Useful when `Direction` is `Negative` - should be close to 0 when `Positive`. Change this to pull in or push out the start of the mirror effect. Combine this value - to hide enough of the object at the start of transition, and the scale value to reveal enough of the object at the end.
 
 **Shadow Scale**<br>
 Same as `Scale` but for shadows. It lets you adjust the shadow transition scale separately to fine tune the shadow transition and align it with the mesh transition. Value should be close to `Scale` however it depends on your `Shadow Alpha Clipping` value.
@@ -149,7 +147,7 @@ You can colour the back face of your double sided object during the transition t
 
 **Backface colouring**<br>
 _This option is only available when surface render face is set to `Both`._<br>
-How much to colour the back face with the 'Backface Colour' defined above.
+How much to colour the back face with the `Backface Colour` defined above.
 
 **Silhouette Tint**<br>
 Tint final colour with a flat silhouette colour to create an unlit silhouette look.
@@ -185,10 +183,10 @@ Choose a type of easing for the transition animation.
 Tick to also transition all children which have a transition material.
 
 **DEBUG IN EDITOR - Transition fader**<br>
-Use this slider to visually debug the transition animation of ALL children materials.<br>This is handy to visualise all your children material transition in one push of a fader.
+Use this slider to visually debug the transition animation of ALL children materials.<br>This is handy to visualise all your children's material transition in one push of a fader.
 
 **Update material list**<br>
-If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials.<br>NOTE: You only need to worry about updating list of materials when in editor mode. When the game starts the list of material will be automatically updated.
+If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials.<br>NOTE:  You only need to worry about updating the list of materials when in editor mode. When the game starts the list of material will be automatically updated.
 
 ## URPTransitionGroup Public Methods:
 
