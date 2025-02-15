@@ -5,14 +5,14 @@
 ## Table of contents:
 1. [What does it do?](#1-What-does-it-do)
 2. [Features](#2-Features)
-3. How to use
-4. Transition Easing
-5. Smooth transparency and depth
-6. Shadow Render face
-7. Unlit and deferred rendering quirk
-8. Transition Options
-9. URPTransitionGroup Option
-10. URPTransitionGroup Public Methods
+3. [How to use](#3-How-to-use)
+4. [Transition Easing](#4-transition-easing)
+5. [Smooth transparency and depth](#4-smooth-transparency-and-depth)
+6. [Shadow Render face](#5-shadow-render-face)
+7. [Unlit and deferred rendering quirk](#6-unlit-and-deferred-rendering-quirk)
+8. [Transition Options](#8-transition-options)
+9. [URPTransitionGroup Option](#9-urptransitionGroup-option)
+10. [URPTransitionGroup Public Methods](#10-urptransitiongroup-public-methods)
 
 ## 1. What does it do?
 
@@ -74,12 +74,12 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 
 You can set which type of animation easing for your material transition in the `URPTransitionGroup` component. Look for the `Transition Ease` drop down that sets which easing will be used with `Transition on start` as well as when you call `FadeIn(float duration)` or `FadeOut(float duration)`. [Know yer easing](https://easings.net/), yeah? 
 
-## Smooth transparency and depth:
+## 5. Smooth transparency and depth:
 
 To achieve smooth transparency without a hard edge use surface type `Transparent` with `Alpha` blend mode and UNTICK `Preserve specular lighting`.
 Depending on your scene, you might get depth issues due to transparency, such as when multiple overlapping meshes share the same `Transparent` surface materials. Tick `Write depth` to force depth write on your transition materials to ressolve meshes overlapping.
 
-## Shadow Render face
+## 6. Shadow Render face
 
 When rendering just the front or back face of a mesh, it's possible for shadows to appear cut off / half missing during the transitions. See image below as an example:
 
@@ -89,11 +89,11 @@ Use `Shadow render face` to override the render face setting for shadows. Flip t
 
 ![URPTransitionGroup component](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img-shadow-02.jpg?raw=true)
 
-##  Unlit and deferred rendering quirk:
+## 7. Unlit and deferred rendering quirk:
 
 When using `Unlit-Transition` in DEFERRED rendering mode, if you see dark areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold. For example with `Alpha clipping` threshold of 0.5, drop the `Base Color` alpha channel to just below 50% and the dark area will become transparent.
 
-## Transition Options:
+## 8. Transition Options:
 
 ![Transition options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03w.png?raw=true)
 
@@ -172,7 +172,7 @@ Which colour to use as the silhouette tint colour.
 _This option is only available when `Silhouette tint` is ON._<br> 
 How much to tint the final colour with the `Silhouette Colour` defined above.
 
-## URPTransitionGroup Options:
+## 9. URPTransitionGroup Options:
 
 ![URPTransitionGroup options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
@@ -200,7 +200,7 @@ Use this slider to visually debug the transition animation of ALL children mater
 **Update material list**<br>
 If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials.<br>NOTE:  You only need to worry about updating the list of materials when in editor mode. When the game starts the list of material will be automatically updated.
 
-## URPTransitionGroup Public Methods:
+## 10. URPTransitionGroup Public Methods:
 
 **FadeIn(float duration)**
 Start the transition fade from 0 to 1, animated over a duration of `duration` (in seconds) AND using the `Transition Ease` set above.
