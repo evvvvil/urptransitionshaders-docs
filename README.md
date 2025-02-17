@@ -16,7 +16,7 @@
 
 ## 1. What does it do?
 
-Users can transition, reveal and fade meshes along an axis. Extends all major URP shaders, such as `Lit`, while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!
+Transition, reveal and fade meshes along local or world axes. Extends all major URP shaders, such as `Lit`, while maintaining key shader features: lighting, surface inputs, etc. Works with shadows!
 
 Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com/watch?v=O7nvYtbpcAo).
 
@@ -36,7 +36,7 @@ Please CTRL / CMD click to [see demo video in a new tab](https://www.youtube.com
 - Or create sequences to fade on start without writing any code
 - "Silhouette" shader option to flash & highlight a mesh with a plain colour (extra)
 - Written in pure HLSL shader code - no overheads
-- SRP batcher compatible
+- SRP batcher compatible & 2d projects compatible
 
 ![Glorious URP transition](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/urp-transition-shaders-03.jpg?raw=true)
 
