@@ -10,9 +10,10 @@
 5. [Smooth transparency and depth](#5-smooth-transparency-and-depth)
 6. [Shadow Render face](#6-shadow-render-face)
 7. [Unlit and deferred rendering quirk](#7-unlit-and-deferred-rendering-quirk)
-8. [Transition Options](#8-transition-options)
-9. [URPTransitionGroup Option](#9-urptransitiongroup-options)
-10. [URPTransitionGroup Public Methods](#10-urptransitiongroup-public-methods)
+8. [Compatibility](#8-compatibility)
+9. [Transition Options](#9-transition-options)
+10. [URPTransitionGroup Options](#10-urptransitiongroup-options)
+11. [URPTransitionGroup Public Methods](#11-urptransitiongroup-public-methods)
 
 ## 1. What does it do?
 
@@ -93,7 +94,18 @@ Use `Shadow render face` to override the render face setting for shadows. Flip t
 
 When using `Unlit-Transition` in DEFERRED rendering mode, if you see dark areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold. For example with `Alpha clipping` threshold of 0.5, drop the `Base Color` alpha channel to just below 50% and the dark area will become transparent.
 
-## 8. Transition Options:
+## 8. Compatibility
+
+This package requires URP.
+Please download the package version based on which Unity you are using:
+If using Unity **2022.3.X** (URP 14) then download package Version **2022.3.53f1**
+If using Unity **2023.1.X** (URP 15) then download package Version **2023.1.20f1**
+If using Unity 2023.2.X (URP 16) then download package Version **2023.2.20f1**
+If using Unity 6000.0.X (URP 17) then download package Version **6000.0.36f1**
+
+If the meshes in the ExampleTransition scene appear **$${\color{pink}PINK}** then you are using the wrong package version for your Unity editor version
+
+## 9. Transition Options:
 
 ![Transition options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img03w.png?raw=true)
 
@@ -172,7 +184,7 @@ Which colour to use as the silhouette tint colour.
 _This option is only available when `Silhouette tint` is ON._<br> 
 How much to tint the final colour with the `Silhouette Colour` defined above.
 
-## 9. URPTransitionGroup Options:
+## 10. URPTransitionGroup Options:
 
 ![URPTransitionGroup options](https://github.com/evvvvil/urptranstionshaders-docs/blob/main/images/Img04.png?raw=true)
 
@@ -200,7 +212,7 @@ Use this slider to visually debug the transition animation of ALL children mater
 **Update material list**<br>
 If you change the object hierachy, such as changing children materials or adding new children, then please click this `Update material list` button to refresh the list of transition materials.<br>NOTE:  You only need to worry about updating the list of materials when in editor mode. When the game starts the list of material will be automatically updated.
 
-## 10. URPTransitionGroup Public Methods:
+## 11. URPTransitionGroup Public Methods:
 
 **FadeIn(float duration)**
 Start the transition fade from 0 to 1, for all the transition materials in the group. Animated over a duration of `duration` (in seconds) AND using the `Transition Ease` set above.
