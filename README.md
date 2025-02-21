@@ -97,13 +97,13 @@ When using `Unlit-Transition` in DEFERRED rendering mode, if you see dark areas 
 ## 8. Compatibility
 
 This package requires URP.
-Please download the package version based on which Unity you are using:
-If using Unity **2022.3.X** (URP 14) then download package Version **2022.3.53f1**
-If using Unity **2023.1.X** (URP 15) then download package Version **2023.1.20f1**
-If using Unity 2023.2.X (URP 16) then download package Version **2023.2.20f1**
+Please download the package version based on which Unity you are using:<br>
+If using Unity **2022.3.X** (URP 14) then download package Version **2022.3.53f1**<br>
+If using Unity **2023.1.X** (URP 15) then download package Version **2023.1.20f1**<br>
+If using Unity 2023.2.X (URP 16) then download package Version **2023.2.20f1**<br>
 If using Unity 6000.0.X (URP 17) then download package Version **6000.0.36f1**
 
-If the meshes in the ExampleTransition scene appear **$${\color{pink}PINK}** then you are using the wrong package version for your Unity editor version
+If the meshes in the ExampleTransition scene appear $${\color{red}PINK} then you are using the wrong package version for your Unity editor version
 
 ## 9. Transition Options:
 
