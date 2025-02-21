@@ -95,7 +95,7 @@ Use `Shadow render face` to override the render face setting for shadows. Flip t
 When using `Unlit-Transition` in DEFERRED rendering mode, if you see dark areas which should be transparent: turn on `Alpha clipping` and drop `Base Color` alpha channel to a value below the `Alpha Clipping` threshold. For example with `Alpha clipping` threshold of 0.5, drop the `Base Color` alpha channel to just below 50% and the dark area will become transparent.
 
 ## 8. Compatibility
-$\color{red}{\textsf{lorem ipsum}}$
+**$\color{pink}{\textsf{PINK}}$**
 This package requires URP.
 Please download the package version based on which Unity you are using:<br>
 If using Unity **2022.3.X** (URP 14) then download package Version **2022.3.53f1**<br>
