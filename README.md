@@ -96,7 +96,7 @@ When using `Unlit-Transition` in DEFERRED rendering mode, if you see dark areas 
 
 ## 8. Compatibility
 
-This package requires URP.
+This package requires URP.<br>
 Please download the package version based on which Unity you are using:<br>
 If using Unity **2022.3.X** (URP 14) then download package Version **2022.3.53f1**<br>
 If using Unity **2023.1.X** (URP 15) then download package Version **2023.1.20f1**<br>
